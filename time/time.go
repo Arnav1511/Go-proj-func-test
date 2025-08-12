@@ -17,8 +17,8 @@ func main() {
 	var testslice = []int{}
 	var testslice2 = make([]int, 0, n)
 
-	fmt.Println("Starting loop to fill slice with 100000 integers...%v\n", timeLoop(testslice, n))
-	fmt.Println("Starting loop to fill slice using preallocation...%v\n", timeLoop(testslice2, n))
+	fmt.Printf("Starting loop to fill slice with 100000 integers: %v\n", timeLoop(testslice, n))
+	fmt.Printf("Starting loop to fill slice using preallocation: %v", timeLoop(testslice2, n))
 }
 
 func timeLoop(slice []int, n int) time.Duration {
