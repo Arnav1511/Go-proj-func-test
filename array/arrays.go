@@ -38,4 +38,8 @@ func main() {
 	intSlice3 := make([]int32, 2)
 	copy(intSlice3, intArr[1:3])
 	fmt.Println(intSlice3)
+
+	var intSlice4 []int32 = make([]int32, 2, 5)
+	copy(intSlice4, intArr[1:3])
+	fmt.Println(intSlice4)
 }
