@@ -42,4 +42,25 @@ func main() {
 	var intSlice4 []int32 = make([]int32, 2, 5)
 	copy(intSlice4, intArr[1:3])
 	fmt.Println(intSlice4)
+
+	// moving on the the next topic which I will be learning is maps
+	fmt.Println("Moving on to maps")
+	// I am going to add a line break here to separate the output
+	fmt.Println()
+
+	var myMap map[string]int32 = make(map[string]int32)
+	fmt.Println(myMap)
+
+	var myMap2 = map[string]int32{"Arnav": 1, "Chauch": 2}
+	fmt.Println(myMap2)
+
+	//say if you want to check if the key exists in the map
+
+	fmt.Println()
+
+	if value, okayornot := myMap2["Jason"]; okayornot {
+		fmt.Println("Key 'Jason' exists with value:", value)
+	} else {
+		fmt.Println("Key 'Jason' does not exist")
+	}
 }
