@@ -28,4 +28,14 @@ func main() {
 	intSlice2 := []int32{15, 16, 17}
 	intSlice = append(intSlice, intSlice2...)
 	fmt.Println(intSlice)
+
+	//I found another way to make a slice from an array
+	//using the make function
+	//this is useful when you want to create a slice with a specific length and capacity
+	//but you don't want to use the array syntax
+	//so we can use the make function to create a slice from an array
+	//and then copy the elements from the array to the slice
+	intSlice3 := make([]int32, 2)
+	copy(intSlice3, intArr[1:3])
+	fmt.Println(intSlice3)
 }
