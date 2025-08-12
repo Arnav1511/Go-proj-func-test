@@ -63,4 +63,9 @@ func main() {
 	} else {
 		fmt.Println("Key 'Jason' does not exist")
 	}
+
+	//coming to loops in go
+	for key, value := range myMap2 {
+		fmt.Printf("Key: %s, Value: %d\n", key, value)
+	}
 }
