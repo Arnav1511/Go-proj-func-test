@@ -13,6 +13,7 @@ func main() {
 	//the first one will take longer because it has to resize the slice multiple times
 	//the second one will be faster because it has a preset capacity and doesn't need to resize
 	//so we can see how much faster it is to use preallocation
+    //this is just me trying to learn go
 	var n int = 100000
 	var testslice = []int{}
 	var testslice2 = make([]int, 0, n)
