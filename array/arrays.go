@@ -13,6 +13,7 @@ func main() {
 	var intSlice []int32 = intArr[1:3]
 	fmt.Println(intSlice)
 	// we can print out the length and capacity of the slice
+    //slicing and checking capacity next
 
 	fmt.Println("Length:", len(intSlice))
 	fmt.Println("Capacity:", cap(intSlice))
