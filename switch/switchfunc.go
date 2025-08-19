@@ -34,7 +34,7 @@ func printMe(printvalue string) {
 func intdivision(numerator int, denominator int) (int, int, error) {
 	var err error
 	if denominator == 0 {
-		err = errors.New("division by zero so we cannot divide mate")
+		err = errors.New("division by zero so we cannot divide")
 		return 0, 0, err
 	}
 	var result int = numerator / denominator

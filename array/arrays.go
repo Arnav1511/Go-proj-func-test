@@ -13,6 +13,7 @@ func main() {
 	var intSlice []int32 = intArr[1:3]
 	fmt.Println(intSlice)
 	// we can print out the length and capacity of the slice
+    //slicing and checking capacity next
 
 	fmt.Println("Length:", len(intSlice))
 	fmt.Println("Capacity:", cap(intSlice))
@@ -35,6 +36,7 @@ func main() {
 	//but you don't want to use the array syntax
 	//so we can use the make function to create a slice from an array
 	//and then copy the elements from the array to the slice
+	//testing slices in go lang
 	intSlice3 := make([]int32, 2)
 	copy(intSlice3, intArr[1:3])
 	fmt.Println(intSlice3)
