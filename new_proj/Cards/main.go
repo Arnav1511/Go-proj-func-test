@@ -5,6 +5,7 @@ import (
 )
 
 func main() {
-	var card string = "Ace of Spades"
+	card := "Ace of Spades"
+	card = "King of Hearts" // Example of modifying the card variable
 	fmt.Println(card)
 }
