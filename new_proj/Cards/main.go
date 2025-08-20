@@ -4,11 +4,13 @@ import (
 	"fmt"
 )
 
-var cards = "Ace of Spades"
-
 func main() {
-	card := "Ace of Spades"
-	card = "King of Hearts" // Example of modifying the card variable
+	card := newCard()
+
 	fmt.Println(card)
-	fmt.Println(cards) // Print the global cards variable
+
+}
+
+func newCard() string {
+	return "Ace of Spades"
 }
