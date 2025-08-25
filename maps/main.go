@@ -8,6 +8,6 @@ func main() {
 		"green": "#00ff00",
 		"blue":  "#0000ff",
 	}
-
+	delete(colours, "green")
 	fmt.Println(colours)
 }
