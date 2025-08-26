@@ -5,6 +5,7 @@ import (
 	"testing"
 )
 
+// need to revisit this for understanding test better.
 func TestNewDeck(t *testing.T) {
 
 	d := newDeck()
