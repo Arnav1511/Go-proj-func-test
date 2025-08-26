@@ -1,5 +1,6 @@
 package main
 
+// print area of square and triangle using interface
 import "fmt"
 
 type shape interface {
