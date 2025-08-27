@@ -12,7 +12,7 @@ func main() {
 	}
 
 	for _, links := range links {
-		checkLink(links)
+		go checkLink(links)
 
 	}
 }
@@ -25,5 +25,3 @@ func checkLink(links string) {
 	}
 	println(links, "is up!")
 }
-
-// The above is not the best approach for this so some sort of a parallel approach would be better.//
