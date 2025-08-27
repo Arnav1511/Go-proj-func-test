@@ -10,18 +10,21 @@ func main() {
 		"https://www.google.com",
 		"https://www.arnavranjan.com",
 	}
+	c := make(chan string)
 
-	for _, links := range links {
-		go checkLink(links)
+	for _, link := range links {
+		go checkLink(link, c)
 
 	}
 }
 
-func checkLink(links string) {
-	_, err := http.Get(links)
+func checkLink(link string, c chan string) {
+	_, err := http.Get(link)
 	if err != nil {
-		println(links, "might be down!")
+		println(link, "might be down!")
 		return
 	}
-	println(links, "is up!")
+	println(link, "is up!")
 }
+
+// need to create channels above to make the print happen.
