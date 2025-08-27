@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"net/http"
 )
 
@@ -17,8 +16,8 @@ func main() {
 		go checkLink(link, c)
 
 	}
-	for i := 0; i < len(links); i++ {
-		fmt.Println(<-c)
+	for {
+		go checkLink(<-c, c)
 	}
 }
 
@@ -26,11 +25,11 @@ func checkLink(link string, c chan string) {
 	_, err := http.Get(link)
 	if err != nil {
 		println(link, "might be down!")
-		c <- "Might be down I think"
+		c <- link
 		return
 	}
 	println(link, "is up!")
-	c <- "Yeahhh its up "
+	c <- link
 }
 
 // need to create channels above to make the print happen.
