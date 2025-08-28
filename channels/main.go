@@ -9,7 +9,7 @@ func main() {
 	links := []string{
 		"https://www.youtube.com",
 		"https://www.google.com",
-		// "https://www.arnavranjan.com",
+		"https://www.arnavranjan.com",
 	}
 	c := make(chan string)
 
@@ -37,5 +37,3 @@ func checkLink(link string, c chan string) {
 	println(link, "is up!")
 	c <- link
 }
-
-// need to create channels above to make the print happen.
