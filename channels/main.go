@@ -2,6 +2,7 @@ package main
 
 import (
 	"net/http"
+	"time"
 )
 
 func main() {
@@ -17,6 +18,7 @@ func main() {
 
 	}
 	for l := range c {
+		time.Sleep(time.Second)
 		go checkLink(l, c)
 	}
 }
